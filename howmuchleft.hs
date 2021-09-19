@@ -38,7 +38,7 @@ get_bar_fill today = round $ (fromIntegral $ bar_max_len today) * (get_percentag
 format_bar :: UTCTime -> String
 format_bar today = "(" ++ (take (get_bar_fill today) $ repeat '=' ) 
                    ++ (take ((bar_max_len today) - (get_bar_fill today)) $ repeat ' ') ++ ") "
-	               ++ (show $ round $ 100 * (get_percentage today)) ++ " %\n"
+                   ++ (show $ round $ 100 * (get_percentage today)) ++ " %\n"
 
 main :: IO()
 main = do
